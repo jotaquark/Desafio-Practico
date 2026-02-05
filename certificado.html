@@ -26,11 +26,11 @@
             </div>
 
             <div class="main-text">
-                <span class="placeholder-line" style="width: 450px;">Nombre y apellido</span>
+                <span id="nombre" class="placeholder-line" style="width: 450px;">Nombre y apellido</span>
                 <br>
                 se encuentra aprendiendo la tecnología:
                 <br>
-                <span class="course-details placeholder-line">Git y Github</span>
+                <span id="tecnologia" class="course-details placeholder-line">Git y Github</span>
                 mediante ejercicios prácticos y prácticas guiadas.
                 <br>
             </div>
@@ -40,6 +40,13 @@
             </div>
         </div>
     </div>
+
+    <script src="datos.js"></script>
+    <script>
+        //Asignar datos dinámicos al certificado
+        document.getElementById('nombre').textContent = CERTIFICADO_DATA.nombreApellido;
+        document.getElementById('tecnologia').textContent = CERTIFICADO_DATA.tecnologia;
+    </script>
 
     <script>
         const certificado = document.getElementById('certificado');
